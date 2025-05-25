@@ -7,6 +7,10 @@ import os
 
 app = FastAPI()
 
+@app.get("/")
+async def root():
+    return {"message": "Welcome to the Face Restoration API!"}
+
 @app.post("/restore")
 async def restore_face(file: UploadFile = File(...)):
     contents = await file.read()
