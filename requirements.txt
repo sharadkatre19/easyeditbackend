@@ -8,8 +8,3 @@ numpy<2.0
 
 # GFPGAN from GitHub repo (latest)
 gfpgan @ git+https://github.com/TencentARC/GFPGAN.git
-
-# Real-ESRGAN package (for RealESRGAN_x2plus model)
-realesrgan==0.3.0
-
-# Add other dependencies here
