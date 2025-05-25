@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pillow
+torch
+opencv-python
+
+# GFPGAN from GitHub repo (latest)
+gfpgan @ git+https://github.com/TencentARC/GFPGAN.git
+
+# Real-ESRGAN package (for RealESRGAN_x2plus model)
+realesrgan==0.3.0
