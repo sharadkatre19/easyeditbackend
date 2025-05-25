@@ -4,11 +4,12 @@ FROM python:3.9-slim
 # Set the working directory in the container
 WORKDIR /app
 
-# Install system dependencies including git
+# Install system dependencies including git and build tools
 RUN apt-get update && apt-get install -y \
     git \
     gcc \
     libgl1-mesa-glx \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy the requirements file into the container
