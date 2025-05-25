@@ -4,7 +4,7 @@ FROM python:3.9-slim
 # Set the working directory in the container
 WORKDIR /app
 
-# Install system dependencies including git, build tools, and glib
+# Install system dependencies including git and build tools
 RUN apt-get update && apt-get install -y \
     git \
     gcc \
