@@ -1,7 +1,7 @@
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import FileResponse
 from starlette.background import BackgroundTask
-from app.gfpgan_infer import restore_image  # <--- This should now work
+from app.gfpgan_infer import restore_image_advanced  # <--- This should now work
 import uuid
 import os
 
@@ -22,7 +22,7 @@ async def restore_face(file: UploadFile = File(...)):
     with open(temp_input, "wb") as f:
         f.write(contents)
 
-    restore_image(input_path=temp_input, output_path=temp_output)
+    restore_image_advanced(input_path=temp_input, output_path=temp_output)
 
     def cleanup_files():
         os.remove(temp_input)
